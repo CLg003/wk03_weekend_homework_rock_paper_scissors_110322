@@ -8,6 +8,10 @@ from models.game_list import game
 def index():
     return render_template('index.html', title="Home")
 
+@app.route('/play')
+def play():
+    return render_template('play.html', title="Play Game")
+
 @app.route('/<p1_choice>/<p2_choice>')
 def result(p1_choice, p2_choice):
     players[0].choice = p1_choice
