@@ -20,13 +20,25 @@ h1 {
     margin: 0;
 }
 
+h1:hover {
+    text-shadow: 0 2px 5px black;
+}
+
 h1 > a {
+    color: rgb(52, 3, 131);
+}
+
+h1 > a:hover {
     color: rgb(61, 1, 158);
 }
 
 a {
     text-decoration: none;
     color: rgb(37, 36, 107);
+}
+
+a:hover {
+    color: white;
 }
 
 nav > ul {
@@ -39,6 +51,10 @@ nav > ul > li {
     padding: 0 20px;
     font-weight: bold;
     font-size: 30px;
+}
+
+nav > ul > li:hover {
+    text-shadow: 0 2px 5px rgb(61, 1, 158);
 }
 
 hr {
@@ -81,6 +97,12 @@ ul, ol {
     border-radius: 30%;
 }
 
+#play-game > a:hover {
+    color: white;
+    background-color: rgb(37, 36, 107);
+    box-shadow: 5px 5px 5px rgb(7, 178, 184);
+}
+
 form {
     margin: 20px;
 }
@@ -111,8 +133,15 @@ form > select {
     color: rgb(37, 36, 107);
 }
 
+#play-submit > input:hover {
+    color: white;
+    background-color: rgb(37, 36, 107);
+    box-shadow: 5px 5px 5px rgb(7, 178, 184);
+}
+
 footer {
     background-color: rgb(7, 178, 184);
+    color: rgb(52, 3, 131);
     padding: 10px 0;
     text-align: center;
     font-weight: bold;
