@@ -81,6 +81,36 @@ ul, ol {
     border-radius: 30%;
 }
 
+form {
+    margin: 20px;
+}
+
+form > label {
+    margin: 20px;
+}
+
+form > input {
+    padding: 5px;
+}
+
+form > select {
+    padding: 5px;
+}
+
+#play-submit {
+    text-align: center;
+}
+
+#play-submit > input {
+    padding: 10px 20px;
+    background-color: rgb(7, 178, 184);
+    border: 2px solid rgb(65, 65, 65);
+    border-radius: 30%;
+    font-family: 'Catamaran', 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    color: rgb(37, 36, 107);
+}
+
 footer {
     background-color: rgb(7, 178, 184);
     padding: 10px 0;

@@ -1,19 +1,26 @@
-from flask import render_template
+from flask import render_template, request
 from app import app
-from models.player_list import players
-from models.game_list import game
+from models.player import Player, player_1, player_2
+from models.game import Game
 
 @app.route('/home')
 def index():
-    return render_template('index.html', title="Home")
+    return render_template('index.html', title='Home')
 
 @app.route('/play')
 def play():
-    return render_template('play.html', title="Play Game")
+    return render_template('play.html', title='Play Game')
 
 @app.route('/<p1_choice>/<p2_choice>')
 def result(p1_choice, p2_choice):
-    players[0].choice = p1_choice
-    players[1].choice = p2_choice
-    winner = game.game_result()
-    return render_template('game_result.html', title='Game Result', player_1=players[0], player_2=players[1], winner=winner)
+    player_1.choice = p1_choice
+    player_2.choice = p2_choice
+    winner = Game.game_result(player_1, player_2)
+    return render_template('game_result.html', title='Game Result', player_1=player_1, player_2=player_2, winner=winner)
+
+@app.route('/result', methods=['POST'])
+def play_game():
+    player_1 = Player(request.form['name'], request.form['choice'])
+    player_2 = Game.computer()
+    winner = Game.game_result(player_1, player_2)
+    return render_template('game_result.html', title='Game Result', player_1=player_1, player_2=player_2, winner=winner)

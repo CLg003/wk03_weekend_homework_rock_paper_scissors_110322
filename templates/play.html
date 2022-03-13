@@ -1,3 +1,22 @@
 {% extends 'base.html' %} {% block content %}
-<p>Play game here</p>
+<section class="play-form">
+    <h2>Play the Game</h2>
+    <p>Enter your details to play against the computer!</p>
+    <form action="/result" method="post">
+        <label for="name">Please enter your name:</label>
+        <input type="text" name="name" id="name" placeholder="Name" required>
+        <br>
+        <label for="choice">Rock, Paper or Scissors?</label>
+        <select name="choice" id="choice" required>
+            <option name="please-choose" selected disabled>Please choose...</option>
+            <option name="rock">Rock</option>
+            <option name="paper">Paper</option>
+            <option name="scissors">Scissors</option>
+        </select>
+        <br>
+        <div id="play-submit">
+            <input type="submit" value="Play">
+        </div>
+    </form>
+</section>
 {% endblock %}
