@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+<section class="results">
+    <h2>The results are in...</h2>
+    <p>{{ player_1.name }} played {{ player_1.choice }}.</p>
+    <p>{{ player_2.name }} played {{ player_2.choice }}.</p>
+    {% if winner == player_1 %}
+        <p>{{ player_1.choice.capitalize() }} beats {{ player_2.choice }}, so <b>{{ winner.name }} wins!</b></p>
+    {% elif winner == player_2 %}
+        <p>{{ player_2.choice.capitalize() }} beats {{ player_1.choice }}, so <b>{{ winner.name }} wins!</b></p>
+    {% else %}
+        <p>The plays are matched, so it's a draw!</p>
+    {% endif %}
+</section>
+{% endblock %}

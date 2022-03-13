@@ -1,6 +1,7 @@
 <html>
     <head>
-        <link href="{{ url_for('static', filename='style.css') }}">
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Catamaran:wght@400;700&display=swap" rel="stylesheet">
         <title>{{ title }} - Rock, Paper, Scissors</title>
     </head>
     <body>
@@ -13,10 +14,12 @@
                 </ul>
             </nav>
         </header>
+        <hr>
         <main>
             {% block content %}
             {% endblock %}
         </main>
+        <hr>
         <footer>
             <p>&copy 2022</p>
         </footer>

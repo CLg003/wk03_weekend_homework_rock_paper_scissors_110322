@@ -1,11 +1,11 @@
 {% extends 'base.html' %} {% block content %}
     <section class="instructions">
-        <h3>How to Play</h3>
+        <h2>How to Play</h2>
         <p>Welcome to Rock, Paper, Scissors!</p>
         <p>This is a simple game involving two players. The game is played as follows:</p>
         <ol>
-            <li>Player 1 chooses between "rock", "paper" and "scissors"</li>
-            <li>Player 2 chooses between "rock", "paper" and "scissors"</li>
+            <li>Player 1 chooses to play one of "rock", "paper" or "scissors"</li>
+            <li>At the same time, Player 2 also chooses between "rock", "paper" and "scissors"</li>
         </ol>
         <p>The winner of the game is decided according to the match up between the players' choices:</p>
         <ul>
@@ -14,6 +14,7 @@
             <li>Scissors cuts paper to win the game.</li>
             <li>If both players make the same choice, the game results in a draw!</li>
         </ul>
+        <br>
         <p id="play-game"><a href="/play">Play game</a></p>
     </section>
 {% endblock %}
